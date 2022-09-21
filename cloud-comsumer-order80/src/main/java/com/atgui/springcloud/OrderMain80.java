@@ -1,10 +1,14 @@
 package com.atgui.springcloud;
 
+import cn.hutool.json.JSON;
+import com.atgui.springcloud.entities.Payment;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * @author: HASEE
@@ -18,20 +22,25 @@ import java.text.SimpleDateFormat;
 public class OrderMain80 {
     public static void main(String[] args) {
         SpringApplication.run(OrderMain80.class,args);
-//        String io = "";
-//        String ddd = io.substring(io.indexOf("@")+1);
-//        io = io.substring(0,io.indexOf("@"));
-//        int length = io.length();
-//        String replace = io.substring(io.indexOf("(")+1,io.indexOf("(")+2);
-//        StringBuffer sb = new StringBuffer(replace);
-//        int i = Integer.parseInt(replace);
-//        int i1 = ++i;
-//        System.out.println(i1);
-//        sb.append("日");
-//        sb.setCharAt(sb.lastIndexOf("-"),'月');
-//        sb.setCharAt(sb.lastIndexOf("-"),'年');
-//        System.out.println(sb+(length+""));
-//
-
+//        Payment payment = new Payment();
+//        payment.setSerial("=======");
+//        payment.setId((long)1520);
+//        Map<String,Object> map = new HashMap<>();
+//        Field[] fields = payment.getClass().getDeclaredFields();
+//        for (int i=0;i<fields.length;i++) {
+//            String varName = fields[i].getName();
+//            boolean flag = fields[i].isAccessible();
+//            fields[i].setAccessible(true);
+//            Object var = fields[i].get(payment);
+//            if (null != fields[i].get(payment)){
+//                map.put(varName,var);
+//            }
+//            fields[i].setAccessible(flag);
+//            System.out.println("field:"+fields[i].getName());
+//        }
+//        Payment payment = new Payment();
+//        payment.setId((long)548);
+//        String dfi = payment.getSerial();
+//        System.out.println(dfi);
     }
 }
