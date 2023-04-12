@@ -7,7 +7,6 @@ import com.atgui.springcloud.service.IPaymentService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,7 +36,6 @@ public class PaymentServiceImpl implements IPaymentService {
     @Override
     public CommonResult<List<Payment>> getPayment(Payment payment) {
         List<Payment> payments = paymentDao.getPayment(payment);
-
         if (payments.size()>=0) {
             return new CommonResult<>(200,"查询成功!",payments);
         } else {
